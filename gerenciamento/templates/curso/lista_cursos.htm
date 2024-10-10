@@ -1,0 +1,10 @@
+
+    <h1>Listar Cursos</h1>
+    <ul>
+        {% for curso in cursos %}
+            <li>{{ curso.aluno }} - {{ curso.descricao }} - {{ curso.valor }}</li>
+              <a href="{% url 'atualizar_curso' curso.id %}">Editar</a>
+              <a href="{% url 'deletar_cursos' curso.id % }"></a>
+        {% endfor %}
+    </ul>
+

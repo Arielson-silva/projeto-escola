@@ -1,0 +1,12 @@
+
+    <h1>Listar Alunos</h1>
+    <a href="{% url 'criar_alunos' %}"> Adicionar Alunos</a>
+ 
+    <ul>
+        {% for aluno in alunos %}
+            <li>{{aluno.id }} - {{ aluno.nome }} - {{ aluno.data_nascimento }}</li>
+              <a href="{% url 'atualizar_alunos' aluno.id %}"> Editar</a>
+              <a href="{% url ' deletar_alunos' aluno.id %}">Apagar</a>
+        {% endfor %}
+    </ul>
+
